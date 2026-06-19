@@ -1,2 +1,7 @@
-name = "phantom-store"
-pages_build_output_dir = "dist"
+name = "rust-leptos-landing"
+main = "dist/index.html"
+assets = "dist"
+
+[site]
+bucket = "./dist"
+entry-point = "workers-site"
