@@ -1,0 +1,12 @@
+[phases.setup]
+nixPkgs = ["rustup", "binaryen"]
+
+[phases.install]
+cmds = [
+  "rustup default stable",
+  "rustup target add wasm32-unknown-unknown",
+  "cargo install --locked trunk"
+]
+
+[phases.build]
+cmds = ["trunk build --release"]
